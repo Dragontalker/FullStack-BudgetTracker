@@ -1,25 +1,27 @@
-const mongoose = require("mongoose");
+// Moved schema to server.js.
 
-const Schema = mongoose.Schema;
+// const mongoose = require("mongoose");
 
-const transactionSchema = new Schema(
-  {
-    name: {
-      type: String,
-      trim: true,
-      required: "Enter a name for transaction"
-    },
-    value: {
-      type: Number,
-      required: "Enter an amount"
-    },
-    date: {
-      type: Date,
-      default: Date.now
-    }
-  }
-);
+// const Schema = mongoose.Schema;
 
-const Transaction = mongoose.model("Transaction", transactionSchema);
+// const transactionSchema = new Schema(
+//   {
+//     name: {
+//       type: String,
+//       trim: true,
+//       required: "Enter a name for transaction"
+//     },
+//     value: {
+//       type: Number,
+//       required: "Enter an amount"
+//     },
+//     date: {
+//       type: Date,
+//       default: Date.now
+//     }
+//   }
+// );
 
-module.exports = Transaction;
+// const Transaction = mongoose.model("Transaction", transactionSchema);
+
+// module.exports = Transaction;
