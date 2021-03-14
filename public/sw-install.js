@@ -11,5 +11,10 @@ this.addEventListener('install', (event) => {
 });
 
 this.addEventListener('activate', (event) => {
-    
+    Promise.all([
+
+        this.clients.claim(),
+
+        
+    ])
 });
