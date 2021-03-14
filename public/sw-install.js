@@ -1,5 +1,5 @@
 this.addEventListener('install', (event) => {
-    cashes.open('my-cashe-v1')
+    event.waitUntill(cashes.open('my-cashe-v1')
         .then((cashe) => {
             cashe.addAll([
                 '/',
@@ -7,5 +7,5 @@ this.addEventListener('install', (event) => {
                 '/style.css',
                 '/index.js'
             ]);
-        })
+        }));
 });
