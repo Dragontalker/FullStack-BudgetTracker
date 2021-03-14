@@ -19,63 +19,64 @@ mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/budget", 
   {
     useNewUrlParser: true,
-    useFindAndModify: false
+    useFindAndModify: false,
+    useUnifiedTopology: true
 });
 
-const Schema = mongoose.Schema;
+// const Schema = mongoose.Schema;
 
-const transactionSchema = new Schema(
-  {
-    name: {
-      type: String,
-      trim: true,
-      required: "Enter a name for transaction"
-    },
-    value: {
-      type: Number,
-      required: "Enter an amount"
-    },
-    date: {
-      type: Date,
-      default: Date.now
-    }
-  }
-);
+// const transactionSchema = new Schema(
+//   {
+//     name: {
+//       type: String,
+//       trim: true,
+//       required: "Enter a name for transaction"
+//     },
+//     value: {
+//       type: Number,
+//       required: "Enter an amount"
+//     },
+//     date: {
+//       type: Date,
+//       default: Date.now
+//     }
+//   }
+// );
 
-const Transaction = mongoose.model("Transaction", transactionSchema);
+// const Transaction = mongoose.model("Transaction", transactionSchema);
 
 // routes
-// app.use(require("./routes/api.js"));
+app.use(require("./routes/api.js"));
 
-app.post("/api/transaction", ({body}, res) => {
-  Transaction.create(body)
-    .then(dbTransaction => {
-      res.json(dbTransaction);
-    })
-    .catch(err => {
-      res.status(404).json(err);
-    });
-});
+// app.post("/api/transaction", ({body}, res) => {
+//   Transaction.create(body)
+//     .then(dbTransaction => {
+//       res.json(dbTransaction);
+//     })
+//     .catch(err => {
+//       res.status(404).json(err);
+//     });
+// });
 
-app.post("/api/transaction/bulk", ({body}, res) => {
-  Transaction.insertMany(body)
-    .then(dbTransaction => {
-      res.json(dbTransaction);
-    })
-    .catch(err => {
-      res.status(404).json(err);
-    });
-});
+// app.post("/api/transaction/bulk", ({body}, res) => {
+//   Transaction.insertMany(body)
+//     .then(dbTransaction => {
+//       res.json(dbTransaction);
+//     })
+//     .catch(err => {
+//       res.status(404).json(err);
+//     });
+// });
 
-app.get("/api/transaction", (req, res) => {
-  Transaction.find({}).sort({date: -1})
-    .then(dbTransaction => {
-      res.json(dbTransaction);
-    })
-    .catch(err => {
-      res.status(404).json(err);
-    });
-});
+// app.get("/api/transaction", (req, res) => {
+//   Transaction.find({}).sort({date: -1})
+//     .then(dbTransaction => {
+//       res.json(dbTransaction);
+//     })
+//     .catch(err => {
+//       res.status(404).json(err);
+//     });
+// });
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
