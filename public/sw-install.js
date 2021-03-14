@@ -9,3 +9,7 @@ this.addEventListener('install', (event) => {
             ]);
         }));
 });
+
+this.addEventListener('activate', (event) => {
+    
+});
