@@ -15,6 +15,15 @@ this.addEventListener('activate', (event) => {
 
         this.clients.claim(),
 
-        
+        cashe.keys().then((casheList) => {
+            return Promise.all(
+                casheList.map((casheName) => {
+                    if (cashName !== 'my-cashe-v1') {
+                        return cashes.delete(casheName);
+                    }
+                })
+            )
+        })
+
     ])
 });
