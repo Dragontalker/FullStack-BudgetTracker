@@ -151,3 +151,13 @@ document.querySelector("#add-btn").onclick = function() {
 document.querySelector("#sub-btn").onclick = function() {
   sendTransaction(false);
 };
+
+// Add service worker
+window.addEventListener('load', () => {
+  if ('serviceWorker' in window.navigator) {
+    navigator.serviceWorker.register('sw.js', { scope: '/' })
+      .then((registration) => {
+        console.log(`Service worker register success with scope: ${registration.scope}`);
+      });
+  };
+});
