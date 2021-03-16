@@ -1,6 +1,15 @@
 import {
   get,
   set,
+  getMany,
+  setMany,
+  update,
+  del,
+  clear,
+  keys,
+  values,
+  entries,
+  createStore
 } from 'https://cdn.jsdelivr.net/npm/idb-keyval@5/dist/esm/index.js';
 
 (function init() {
