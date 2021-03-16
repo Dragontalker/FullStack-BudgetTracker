@@ -7,7 +7,11 @@ let CACHE_URLS = [
 ];
 
 const preCashe = () => {
-
+    return cashes
+            .open(CACHE_NAME)
+            .then((cache) => {
+                return cache.addAll(CACHE_URLS);
+            });
 };
 
 const clearCashe = () => {
