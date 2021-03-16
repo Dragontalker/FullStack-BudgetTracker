@@ -161,36 +161,48 @@ function sendTransaction(isAdding) {
   populateTable();
   populateTotal();
   
-  // also send to server
-  fetch("/api/transaction", {
-    method: "POST",
-    body: JSON.stringify(transaction),
-    headers: {
-      Accept: "application/json, text/plain, */*",
-      "Content-Type": "application/json"
-    }
-  })
-  .then(response => {    
-    return response.json();
-  })
-  .then(data => {
-    if (data.errors) {
-      errorEl.textContent = "Missing Information";
-    }
-    else {
+  if (navigator.onLine) {
+    // also send to server
+    fetch("/api/transaction", {
+      method: "POST",
+      body: JSON.stringify(transaction),
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json"
+      }
+    })
+    .then(response => {    
+      return response.json();
+    })
+    .then(data => {
+      if (data.errors) {
+        errorEl.textContent = "Missing Information";
+      }
+      else {
+        // clear form
+        nameEl.value = "";
+        amountEl.value = "";
+      }
+    })
+    .catch(err => {
+      // fetch failed, so save in indexed db
+      set(transaction.date, transaction)
+        .then(() => {
+          console.log(`Offline: transaction at ${transaction.date} is stored to indexDB`)
+        })
+        .catch(console.warn);
+
       // clear form
       nameEl.value = "";
       amountEl.value = "";
-    }
-  })
-  .catch(err => {
-    // fetch failed, so save in indexed db
-    saveRecord(transaction);
-
-    // clear form
-    nameEl.value = "";
-    amountEl.value = "";
-  });
+    });
+  } else {
+    set(transaction.date, transaction)
+        .then(() => {
+          console.log(`Offline: transaction at ${transaction.date} is stored to indexDB`)
+        })
+        .catch(console.warn);
+  };
 }
 
 document.querySelector("#add-btn").onclick = function() {
