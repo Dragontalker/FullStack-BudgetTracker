@@ -7,7 +7,7 @@ let CACHE_URLS = [
 ];
 
 const preCashe = () => {
-    return cashes
+    return caches
             .open(CACHE_NAME)
             .then((cache) => {
                 return cache.addAll(CACHE_URLS);
@@ -15,7 +15,13 @@ const preCashe = () => {
 };
 
 const clearCashe = () => {
-
+    return caches
+            .keys()
+            .then(key => {
+                if (key !== CACHE_NAME) {
+                    caches.delete(key);
+                }
+            });
 };
 
 self.addEventListener('install', (event) => {
