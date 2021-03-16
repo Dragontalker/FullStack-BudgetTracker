@@ -6,7 +6,16 @@ let CACHE_URLS = [
     '/icons/icon-512.png'
 ];
 
-console.log('Hello service world!');
+const preCashe = () => {
+
+};
+
+self.addEventListener('install', (event) => {
+    event.waitUntill(
+        preCashe()
+    );
+});
+
 
 self.addEventListener('fetch', (event) => {
     console.log(`Request: ${event.request.url}`)
