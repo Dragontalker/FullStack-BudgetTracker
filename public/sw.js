@@ -10,12 +10,21 @@ const preCashe = () => {
 
 };
 
+const clearCashe = () => {
+
+};
+
 self.addEventListener('install', (event) => {
     event.waitUntill(
-        preCashe()
+        preCashe();
     );
 });
 
+addEventListener('activated', (event) => {
+    event.waitUntill(
+        clearCashe();
+    );
+});
 
 self.addEventListener('fetch', (event) => {
     console.log(`Request: ${event.request.url}`)
