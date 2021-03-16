@@ -15,6 +15,26 @@ import {
 let transactions = [];
 let myChart;
 
+const getData = async () => {
+  const result = await fetch('/api/transaction')
+  const data = await result.json();
+
+  const syncIndex = await keys();
+  if (syncIndex.length === 0) {
+    transactions = data;
+  } else {
+    const syncList = await getMany(syncIndex);
+    const tempList = syncList.reverse();
+    transactions = tempList.concat(data);
+  }
+  
+  populateTotal();
+  populateTable();
+  populateChart();
+};
+
+getData();
+
 const checkSyncStatus = async () => {
   if (navigator.onLine) {
     const syncIndex = await keys();
@@ -33,12 +53,7 @@ const checkSyncStatus = async () => {
     } 
   }
 
-  const result = await fetch('/api/transaction')
-  transactions = await result.json();
   
-  populateTotal();
-  populateTable();
-  populateChart();
 };
 
 checkSyncStatus();
