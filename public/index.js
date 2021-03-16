@@ -188,7 +188,7 @@ function sendTransaction(isAdding) {
       // fetch failed, so save in indexed db
       set(transaction.date, transaction)
         .then(() => {
-          console.log(`Offline: transaction at ${transaction.date} is stored to indexDB`)
+          console.log(`Database Error: transaction at ${transaction.date} is stored to indexDB`)
         })
         .catch(console.warn);
 
@@ -199,7 +199,7 @@ function sendTransaction(isAdding) {
   } else {
     set(transaction.date, transaction)
         .then(() => {
-          console.log(`Offline: transaction at ${transaction.date} is stored to indexDB`)
+          console.log(`Offline Mode: transaction at ${transaction.date} is stored to indexDB`)
         })
         .catch(console.warn);
   };
