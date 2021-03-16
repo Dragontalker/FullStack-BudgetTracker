@@ -12,42 +12,22 @@ import {
   createStore
 } from 'https://cdn.jsdelivr.net/npm/idb-keyval@5/dist/esm/index.js';
 
-(function init() {
-  set('user_id', Date.now())
-    .then(() => {
-      console.log("Saved the user_id");
-    })
-    .catch(console.warn)
-
-  let myObj = {
-    id: 123,
-    name: 'steve',
-    email: 'steve@work.org'
-  };
-
-  set('info', myObj)
-    .then(() => {
-      console.log('Saved the info');
-    })
-    .catch(console.warn);
-
-  get('info')
-    .then(data => {
-      console.log(`Props 'id': ${data.id}`);
-      console.log(`Props 'name': ${data.name}`);
-      console.log(`Props: 'email': ${data.email}`);
-    })
-    .catch(console.warn);
-})();
-
 let transactions = [];
 let myChart;
-
+let needSync = false;
 
 
 if (navigator.onLine) {
-  console.log("We are online!");
+  keys().then(key => {
+    if (key.length !== 0) {
+      needSync = true;
+    }
+  });
 };
+
+if (needSync) {
+  
+}
   
 
 fetch("/api/transaction")
