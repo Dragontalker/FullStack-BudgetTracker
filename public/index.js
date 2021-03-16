@@ -14,20 +14,27 @@ import {
 
 let transactions = [];
 let myChart;
-let needSync = false;
 
-
-if (navigator.onLine) {
-  keys().then(key => {
-    if (key.length !== 0) {
-      needSync = true;
+const checkSyncStatus = async () => {
+  if (navigator.onLine) {
+    const syncIndex = await keys();
+    if (syncIndex.length !== 0) {
+      const syncList = await getMany(syncIndex);
+      const result = await fetch("/api/transaction/bulk", {
+        method: "POST",
+        body: JSON.stringify(syncList),
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json"
+        }
+      });
+      const clearIndexDB = await clear();
+      return clearIndexDB;
     }
-  });
+  }
 };
 
-if (needSync) {
-  
-}
+checkSyncStatus();
   
 
 fetch("/api/transaction")
