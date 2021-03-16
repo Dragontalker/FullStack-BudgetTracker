@@ -1,6 +1,12 @@
 let transactions = [];
 let myChart;
 
+if (navigator.onLine) {
+  console.log("We are online!");
+} else {
+  console.log("Network service offline...");
+}
+
 fetch("/api/transaction")
   .then(response => {
     return response.json();
