@@ -16,13 +16,13 @@ const clearCashe = () => {
 
 self.addEventListener('install', (event) => {
     event.waitUntill(
-        preCashe();
+        preCashe()
     );
 });
 
-addEventListener('activated', (event) => {
+self.addEventListener('activated', (event) => {
     event.waitUntill(
-        clearCashe();
+        clearCashe()
     );
 });
 
