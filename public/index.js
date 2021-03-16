@@ -30,25 +30,32 @@ const checkSyncStatus = async () => {
       });
       const clearIndexDB = await clear();
       return clearIndexDB;
-    }
+    } 
   }
+
+  const result = await fetch('/api/transaction')
+  transactions = await result.json();
+  
+  populateTotal();
+  populateTable();
+  populateChart();
 };
 
 checkSyncStatus();
   
 
-fetch("/api/transaction")
-  .then(response => {
-    return response.json();
-  })
-  .then(data => {
-    // save db data on global variable
-    transactions = data;
+// fetch("/api/transaction")
+//   .then(response => {
+//     return response.json();
+//   })
+//   .then(data => {
+//     // save db data on global variable
+//     transactions = data;
 
-    populateTotal();
-    populateTable();
-    populateChart();
-  });
+//     populateTotal();
+//     populateTable();
+//     populateChart();
+//   });
 
 function populateTotal() {
   // reduce transaction amounts to a single total value
