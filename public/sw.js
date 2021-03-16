@@ -37,5 +37,10 @@ self.addEventListener('activated', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-    console.log(`Request: ${event.request.url}`)
+    event.respondWith(
+        fetch(event.request)
+            .catch(() => {
+                return cashes.match(event.request);
+            })
+    );
 });
