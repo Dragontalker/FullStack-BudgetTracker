@@ -30,6 +30,14 @@ import {
       console.log('Saved the info');
     })
     .catch(console.warn);
+
+  get('info')
+    .then(data => {
+      console.log(`Props 'id': ${data.id}`);
+      console.log(`Props 'name': ${data.name}`);
+      console.log(`Props: 'email': ${data.email}`);
+    })
+    .catch(console.warn);
 })();
 
 let transactions = [];
