@@ -1,5 +1,20 @@
+import {
+  get,
+  set,
+} from 'https://cdn.jsdelivr.net/npm/idb-keyval@5/dist/esm/index.js';
+
+(function init() {
+  set('user_id', Date.now())
+    .then(() => {
+      console.log("Saved the user_id");
+    })
+    .catch(console.warn)
+})();
+
 let transactions = [];
 let myChart;
+
+
 
 if (navigator.onLine) {
   console.log("We are online!");
