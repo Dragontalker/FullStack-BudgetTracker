@@ -51,20 +51,6 @@ const checkSyncStatus = async () => {
 
 checkSyncStatus();
   
-
-// fetch("/api/transaction")
-//   .then(response => {
-//     return response.json();
-//   })
-//   .then(data => {
-//     // save db data on global variable
-//     transactions = data;
-
-//     populateTotal();
-//     populateTable();
-//     populateChart();
-//   });
-
 function populateTotal() {
   // reduce transaction amounts to a single total value
   let total = transactions.reduce((total, t) => {
