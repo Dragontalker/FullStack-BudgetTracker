@@ -18,6 +18,18 @@ import {
       console.log("Saved the user_id");
     })
     .catch(console.warn)
+
+  let myObj = {
+    id: 123,
+    name: 'steve',
+    email: 'steve@work.org'
+  };
+
+  set('info', myObj)
+    .then(() => {
+      console.log('Saved the info');
+    })
+    .catch(console.warn);
 })();
 
 let transactions = [];
