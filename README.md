@@ -1,5 +1,5 @@
-# PWA - Budget Tracker
-
+# __PWA - Budget Tracker__
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## User Story
 * AS AN avid traveller
