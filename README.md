@@ -4,6 +4,9 @@
 ## __Deployed at Heroku__
 https://dragontalker-budget-tracker.herokuapp.com/
 
+## __Certification of PWA(Progressive Web Aapplication)__
+![lighthouse audit](./Assets/lighthouse_audit.png)
+
 ## User Story
 * AS AN avid traveller
 * I WANT to be able to track my withdrawals and deposits with or without a data/internet connection
