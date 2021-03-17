@@ -52,6 +52,23 @@ THEN that will be shown on the page, and added to their transaction history when
 
 ### __Installation__
 
+To install the PWA on your mobile device, please follow the instruction and check the area highlighted by red boxes. The example here demonstrates the steps for installation on IOS devices.
+
 ##### __Step 1__
 
-![installation]('./Assets/step_1.jpg)
+Head to https://dragontalker-budget-tracker.herokuapp.com/, then click the export button.
+
+![installation_1](./Assets/step_1.jpg)
+
+
+##### __Step 2__
+
+Click on option `Add to Home Screen`.
+
+![installation_2](./Assets/step_2.jpg)
+
+##### __Step 3__
+
+Click on option `Add`.
+
+![installation_3](./Assets/step_3.jpg)
