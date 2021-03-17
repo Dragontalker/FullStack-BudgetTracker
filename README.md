@@ -56,7 +56,7 @@ To install the PWA on your mobile device, please follow the instruction and chec
 
 ---
 
-##### __Step 1__
+#### __Step 1__
 
 Head to https://dragontalker-budget-tracker.herokuapp.com/, then click the export button.
 
@@ -64,7 +64,7 @@ Head to https://dragontalker-budget-tracker.herokuapp.com/, then click the expor
 
 ---
 
-##### __Step 2__
+#### __Step 2__
 
 Click on option `Add to Home Screen`.
 
@@ -72,7 +72,7 @@ Click on option `Add to Home Screen`.
 
 ---
 
-##### __Step 3__
+#### __Step 3__
 
 Click on option `Add`.
 
@@ -80,8 +80,36 @@ Click on option `Add`.
 
 ---
 
-##### __Step 4__
+#### __Step 4__
 
 Now the PWA is install on your home screen, you can open it from there.
 
 <img src="./Assets/step_4.jpg" width="200"/>
+
+---
+
+#### __Step 5__
+
+Enjoy your PWA just like any other native APPs!
+
+<img src="./Assets/step_5.jpg" width="200"/>
+
+---
+
+### __Usage__
+
+Enter name and dollar amount for each transaction you want to record, the transaction history and budget graph will be updated accordingly.
+
+---
+
+### __Contact__
+If you have any questions, email me at richard.yang.tong@gmail.com.
+
+### __License__
+Copyright (c) [2021] [Richard Yang]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
