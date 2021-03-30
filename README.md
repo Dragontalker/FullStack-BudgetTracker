@@ -24,9 +24,13 @@ https://dragontalker-budget-tracker.herokuapp.com/
 
 - Second, it doesn't depends on network connections. If your device is offline or having unstable connections, this PWA still stores all your data and sync them when the device is back online.
 
+[Back to the Top](#google-books-search)
+
 ## **Certification of PWA(Progressive Web Aapplication)**
 
 ![lighthouse audit](./Assets/lighthouse_audit.png)
+
+[Back to the Top](#google-books-search)
 
 ## :wrench: **Technologies Used**
 
@@ -44,6 +48,8 @@ https://dragontalker-budget-tracker.herokuapp.com/
 - JavaScript
 - VS Code
 - Heroku
+
+[Back to the Top](#google-books-search)
 
 #### **Step 1**
 
