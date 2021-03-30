@@ -51,47 +51,51 @@ https://dragontalker-budget-tracker.herokuapp.com/
 
 [Back to the Top](#budget-tracker)
 
-#### **Step 1**
+# How to Use
+
+:crystal_ball: To install this application as a PWA on your mobile device, follow the steps below:
+
+## **Step 1**
 
 Head to https://dragontalker-budget-tracker.herokuapp.com/, then click the export button.
 
 <img src="./Assets/step_1.jpg" width="200"/>
 
----
+[Back to the Top](#budget-tracker)
 
-#### **Step 2**
+## **Step 2**
 
 Click on option `Add to Home Screen`.
 
 <img src="./Assets/step_2.jpg" width="200"/>
 
----
+[Back to the Top](#budget-tracker)
 
-#### **Step 3**
+## **Step 3**
 
 Click on option `Add`.
 
 <img src="./Assets/step_3.jpg" width="200"/>
 
----
+[Back to the Top](#budget-tracker)
 
-#### **Step 4**
+## **Step 4**
 
 Now the PWA is install on your home screen, you can open it from there.
 
 <img src="./Assets/step_4.jpg" width="200"/>
 
----
+[Back to the Top](#budget-tracker)
 
-#### **Step 5**
+## **Step 5**
 
 Enjoy your PWA just like any other native APPs!
 
 <img src="./Assets/step_5.jpg" width="200"/>
 
----
+[Back to the Top](#budget-tracker)
 
-### **Usage**
+## **Usage**
 
 Enter name and dollar amount for each transaction you want to record, the transaction history and budget graph will be updated accordingly.
 
