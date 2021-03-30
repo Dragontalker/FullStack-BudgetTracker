@@ -1,4 +1,4 @@
-# **PWA - Budget Tracker**
+# **Budget Tracker**
 
 [![Javascript Badge](https://img.shields.io/badge/-Javascript-F0DB4F?style=for-the-badge&labelColor=black&logo=javascript&logoColor=F0DB4F)](#) [![MonogoDB Badge](https://img.shields.io/badge/-MongoDB-4DB33D?style=for-the-badge&labelColor=black&logo=mongodb&logoColor=3FA037)](#) [![ExpressJS Badge](https://img.shields.io/badge/-Express.JS-ff781f?style=for-the-badge&labelColor=black&logo=express&logoColor=FF781F)](#) [![Nodejs Badge](https://img.shields.io/badge/-Node.js-3C873A?style=for-the-badge&labelColor=black&logo=node.js&logoColor=3C873A)](#) [![Boostrap Badge](https://img.shields.io/badge/-bootstrap5-553c7b?style=for-the-badge&labelColor=black&logo=bootstrap&logoColor=553c7b)](#)
 
@@ -24,13 +24,13 @@ https://dragontalker-budget-tracker.herokuapp.com/
 
 - Second, it doesn't depends on network connections. If your device is offline or having unstable connections, this PWA still stores all your data and sync them when the device is back online.
 
-[Back to the Top](#google-books-search)
+[Back to the Top](#budget-tracker)
 
 ## **Certification of PWA(Progressive Web Aapplication)**
 
 ![lighthouse audit](./Assets/lighthouse_audit.png)
 
-[Back to the Top](#google-books-search)
+[Back to the Top](#budget-tracker)
 
 ## :wrench: **Technologies Used**
 
@@ -49,7 +49,7 @@ https://dragontalker-budget-tracker.herokuapp.com/
 - VS Code
 - Heroku
 
-[Back to the Top](#google-books-search)
+[Back to the Top](#budget-tracker)
 
 #### **Step 1**
 
