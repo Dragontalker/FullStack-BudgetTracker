@@ -99,7 +99,19 @@ Enjoy your PWA just like any other native APPs!
 
 Enter name and dollar amount for each transaction you want to record, the transaction history and budget graph will be updated accordingly.
 
----
+[Back to the Top](#budget-tracker)
+
+# How to Install
+
+:cd: For local installtion, use the following command:
+
+```bash
+npm install
+```
+
+Then open the application in your brower at http://localhost:3000.
+
+[Back to the Top](#budget-tracker)
 
 ### **Contact**
 
