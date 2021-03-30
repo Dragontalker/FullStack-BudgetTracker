@@ -26,7 +26,7 @@ https://dragontalker-budget-tracker.herokuapp.com/
 
 [Back to the Top](#budget-tracker)
 
-## **Certification of PWA(Progressive Web Aapplication)**
+## :muscle: **Certification of PWA(Progressive Web Aapplication)**
 
 ![lighthouse audit](./Assets/lighthouse_audit.png)
 
