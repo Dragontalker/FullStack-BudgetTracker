@@ -18,15 +18,32 @@ https://dragontalker-budget-tracker.herokuapp.com/
 
 # Description
 
-Embrace the future of PWA (Progressive Web Application)! We built a budget tracker following the standard of PWA, which means it works on mobile devices just like native APPs. By that, it does have the following important features.
+:mag_right: Embrace the future of PWA (Progressive Web Application)! We built a budget tracker following the standard of PWA, which means it works on mobile devices just like native APPs. By that, it does have the following important features.
 
 - First, it can be installed on your home screen, and once you start the PWA from home screen, it works in fullscreen mode which gives you the same user experience as native APPs.
 
 - Second, it doesn't depends on network connections. If your device is offline or having unstable connections, this PWA still stores all your data and sync them when the device is back online.
 
-### **Certification of PWA(Progressive Web Aapplication)**
+## **Certification of PWA(Progressive Web Aapplication)**
 
 ![lighthouse audit](./Assets/lighthouse_audit.png)
+
+## :wrench: **Technologies Used**
+
+- Service Worker
+- IndexDB
+- Chrome DevTools
+- Express.js
+- Node.js
+- RESTful Api
+- MongoDB
+- Mongoose
+- Bootstrap 5
+- HTML 5
+- CSS 3
+- JavaScript
+- VS Code
+- Heroku
 
 #### **Step 1**
 
